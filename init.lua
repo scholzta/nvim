@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
   require 'plugins.todo',
   require 'plugins.alpha',
+  require 'plugins.obsidian',
   require 'plugins.autocompletion',
   require 'plugins.bufferline',
   require 'plugins.centercursor',
@@ -37,6 +38,7 @@ require('lazy').setup {
   require 'plugins.treesitter',
   require 'plugins.ts-autotag',
   require 'plugins.zen',
+  require 'plugins.i18'
   --require 'plugins.notebooks',
 }
 

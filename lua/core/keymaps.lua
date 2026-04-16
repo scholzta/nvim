@@ -57,12 +57,6 @@ vim.keymap.set('n', '<C-j>', ':wincmd j<CR>', opts)
 vim.keymap.set('n', '<C-h>', ':wincmd h<CR>', opts)
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>', opts)
 
--- Tabs
-vim.keymap.set('n', '<leader>to', ':tabnew<CR>', opts) -- open new tab
-vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', opts) -- close current tab
-vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts) --  go to next tab
-vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts) --  go to previous tab
-
 -- Toggle line wrapping
 vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
 
@@ -84,4 +78,7 @@ vim.keymap.set('n', '<leader>n', ':Neogit<CR>', opts)
 -- Markdown Preview
 vim.keymap.set('n', '<leader>m', ':MarkdownPreview', opts)
 
--- replace Search with fuzzy search
+-- I18 Settings
+vim.keymap.set('n', '<leader>te', ':I18nEditTranslation en<CR>', opts)
+vim.keymap.set('n', '<leader>td', ':I18nEditTranslation de<CR>', opts)
+
