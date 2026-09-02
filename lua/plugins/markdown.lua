@@ -26,7 +26,7 @@ return {
     lazy = true,
     keys = {
       {
-        '<leader>,',
+        '<leader>a,',
         function()
           require('md-pdf').convert_md_to_pdf()
         end,

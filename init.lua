@@ -13,11 +13,15 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 -- Set up plugins
 require('lazy').setup {
+  require 'plugins.org',
+  require 'plugins.latex',
+  require 'plugins.luasnips',
+  require 'plugins.texpresso',
   require 'plugins.todo',
   require 'plugins.alpha',
-  require 'plugins.obsidian',
   require 'plugins.autocompletion',
   require 'plugins.bufferline',
   require 'plugins.centercursor',
@@ -41,6 +45,9 @@ require('lazy').setup {
   require 'plugins.i18'
   --require 'plugins.notebooks',
 }
+
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
+
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

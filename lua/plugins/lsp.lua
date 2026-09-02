@@ -218,6 +218,21 @@ return {
       },
     }
 
+    local lspconfig = require("lspconfig")
+    lspconfig.texlab.setup({
+      settings = {
+        texlab = {
+          build = {
+            onSave = true
+          },
+          forwardSearch = {
+            executable = "zathura",
+            args = { "--synctex-forward", "%l:1:%p", "%pdf"},
+          },
+        },
+      },
+    })
+
     -- Ensure the servers and tools above are installed
     --  To check the current status of installed tools and/or manually install
     --  other tools, you can run
